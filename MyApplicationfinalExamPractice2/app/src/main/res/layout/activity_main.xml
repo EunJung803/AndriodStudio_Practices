@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TabWidget>
+
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/problem1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#00ff00">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+                    <TableRow>
+                        <Button
+                            android:text="0"
+                            />
+                        <Button
+                            android:text="1"
+                            />
+                        <Button
+                            android:text="2"
+                            />
+                        <Button
+                            android:text="3"
+                            />
+                    </TableRow>
+
+                    <TableRow>
+                        <Button
+                            android:layout_column="1"
+                            android:text="4"
+                            />
+                        <Button
+                            android:layout_column="3"
+                            android:text="5"
+                            />
+                    </TableRow>
+
+                    <TableRow>
+                        <Button
+                            android:layout_column="0"
+                            android:text="6"
+                            />
+                        <Button
+                            android:layout_span = "2"
+                            android:layout_column="2"
+                            android:text="7"
+                            />
+                    </TableRow>
+                </TableLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/baseBtn"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:text="8" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/baseBtn"
+                        android:layout_toLeftOf="@+id/baseBtn"
+                        android:text="9" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/baseBtn"
+                        android:layout_toRightOf="@+id/baseBtn"
+                        android:text="10" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/baseBtn"
+                        android:layout_toRightOf="@+id/baseBtn"
+                        android:text="11"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/problem2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00ff00"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/problem3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</TabHost>
